@@ -79,11 +79,10 @@ input.addEventListener(
 
         const pattern = /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
 
-        if(pattern.test(input)){
-           enableButton('initiate');
-        };
 
-        disableButton('initiate');
+        if(pattern.test(input.value)){
+           enableButton('initiate');
+        }else{disableButton('initiate');};
 
     }
 )
