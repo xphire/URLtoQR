@@ -76,12 +76,15 @@ input.addEventListener(
     'input', function(event){
         
         event.preventDefault();
-        if(input.checkValidity()){
+
+        const pattern = /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
+
+        if(input.checkValidity() && pattern.test(input)){
            enableButton('initiate');
         };
-        if(input.value === ""){
-            disableButton('initiate');
-        }
+
+        disableButton('initiate');
+
     }
 )
   
