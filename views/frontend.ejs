@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERATE QR CODE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="KT_favicon.png" type="image/png">
+</head>
+<body>
+<header>
+   <div class="w-100 col-12 bg-dark fixed-top d-flex justify-content-end align-items-center pe-5">
+         <img src="kt-nobg.png" alt="">
+   </div>
+</header>
+
+
+<main>
+    <div class="w-100 col-12 mt-5 mb-3 pt-5">
+        <h3 class="text-center display-3 fw-bold">URL To QR-Code Generator</h3>
+        
+        <div class="col-12 d-flex justify-content-center align-items-center w-100 mt-4"  id="generator">
+
+            <form id="form">
+
+                <h4 class="text-center pt-2">Enter URL Below</h4>
+
+            
+                <div class="mb-3">
+
+                  <input type="url" class="form-control-lg" id="url" aria-describedby="emailHelp" name="url">
+                  <div id="emailHelp" class="form-text">URL Should be like https://example.com</div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary fs-3" onclick="plantQR()" id="initiate" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+                            <path d="M2 2h2v2H2V2Z"/>
+                            <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"/>
+                            <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"/>
+                            <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z"/>
+                            <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"/>
+                        </svg>
+                        Generate QR
+                    </button>
+                </div>
+             
+            </form>
+             
+        </div>
+       
+    </div>
+
+    <div class="w-100 col-12" id="QRcontainer" style="display: none;">
+           <h4 class="text-center">Download Generated QR-CODE</h4>
+
+           <div class="text-center mb-3">
+            <img src="" alt="" width="200" height="200" id="image">
+          </div>
+
+           <div class="text-center">
+                <button type="button" class="btn btn-primary fs-3" id="download">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+                </svg>
+                    Download QR
+                </button>
+          </div>
+
+          
+    </div>
+</main>
+<footer>
+    <div class="w-100 col-12 bg-dark text-center fw-bold fs-4 text-white fixed-bottom py-1" id="footer"></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="laminar.js"></script>  
+</body>
+</html>
