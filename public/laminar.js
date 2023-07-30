@@ -101,6 +101,7 @@ document.getElementById('initiate').addEventListener(
     'click',(e) => {
         e.preventDefault();
         disableButton('initiate');
+        disableButton('url');
     }
 )
 
